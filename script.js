@@ -5,6 +5,7 @@ var num = document.getElementById('number').value;
 
 var charArr;
 $('.play').on('click', function(){
+    $( ".bd-highlight" ).remove();
     $(".output").show();
     var index = $('#number').val();
     var topic = arr[index];
