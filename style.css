@@ -1,9 +1,16 @@
 /* Add your styles here */
 
-.container{
-    margin-top: 50px;
+.container-fluid{
+    margin-top: 80px;
+    margin-left: 20px;
 }
+
 .input{
     margin-right: 80px;
     padding-right: 80px;
+ 
+}
+
+.output{
+
 }
