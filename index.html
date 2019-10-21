@@ -2,21 +2,29 @@
 <html>
   <head>
     <title>Mid Q4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
       <!-- Your site content here -->
-      <div>
-        <h1>Simple Hangman</h1>
-        <p>Enter a number between 0 and 5</p>
-        <input type="number" name="" id="number">
-        <button type="submit" class="play">play</button>
-      </div>
-      <div>
-        <input type="text" name="" id=""><span></span>
+      <div class="container">
+        <div class="row">
+          <div class="column input" style="border-right: 1px solid blue;">
+            <h1>Simple Hangman</h1>
+            <p>Enter a number between 0 and 5</p>
+            <input type="number" name="" id="number">
+            <button type="submit" class="play">play</button>
+          </div>
+          <div class="column output">
+            <input type="text" name="" id="" placeholder="Guess a character!!"><span></span>
+            
 
+          </div>
+        </div>
       </div>
       <script src="jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="script.js"></script>
   </body>
 </html>
