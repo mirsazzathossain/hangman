@@ -3,10 +3,10 @@ var arr=["education", "technology", "mathematics", "science", "engineering", "ar
 
 var num = document.getElementById('number').value;
 
-var topic;
+var charArr;
 $('.play').on('click', function(){
     var index = $('#number').val();
-    topic = arr[index];
+    var topic = arr[index];
 
     
     var script='';
@@ -20,16 +20,13 @@ $('.play').on('click', function(){
     }
 
     $('.output').append(`<div class="d-flex flex-row bd-highlight mb-3">${script}</div>`);
-
+    charArr=topic.split('');
 });
 
 $('#char').on('input', function(){
-    var charArr=topic.split('');
     var char = $('#char').val();
     if(char != ''){
         if(charArr.includes(char)){
-            console.log(charArr);
-
             $('span').html('  Correct! :)');
             $('span').css('color', 'green');
 
