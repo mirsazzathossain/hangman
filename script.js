@@ -13,15 +13,20 @@ $('.play').on('click', function(){
     var script='';
     for(var char of topic){
         if(char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
-           script+= '<div class="p-3 bd-highlight" style="border-bottom: 1px dotted red; margin-right:5px;"></div>';
+           script+= '<div class="p-3 bd-highlight" style="border-bottom: 2px dotted red; margin-right:5px;"></div>';
         }
         else{
-            script+= '<div class="p-3 bd-highlight" style="border-bottom: 1px solid black; margin-right:5px;"></div>';
+            script+= '<div class="p-3 bd-highlight" style="border-bottom: 2px solid black; margin-right:5px;"></div>';
         }
     }
 
     $('.output').append(`<div class="d-flex flex-row bd-highlight mb-3">${script}</div>`);
     charArr=topic.split('');
+});
+
+$('#number').on('input', function(){
+    $(".output").hide();
+    $( ".bd-highlight" ).remove();
 });
 
 $('#char').on('input', function(){
