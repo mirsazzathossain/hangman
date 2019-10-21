@@ -3,9 +3,10 @@ var arr=["education", "technology", "mathematics", "science", "engineering", "ar
 
 var num = document.getElementById('number').value;
 
+var topic;
 $('.play').on('click', function(){
     var index = $('#number').val();
-    var topic = arr[index];
+    topic = arr[index];
 
     
     var script='';
@@ -20,4 +21,30 @@ $('.play').on('click', function(){
 
     $('.output').append(`<div class="d-flex flex-row bd-highlight mb-3">${script}</div>`);
 
+});
+
+$('#char').on('input', function(){
+    var charArr=topic.split('');
+    var char = $('#char').val();
+    if(char != ''){
+        if(charArr.includes(char)){
+            console.log(charArr);
+
+            $('span').html('  Correct! :)');
+            $('span').css('color', 'green');
+
+            var index = charArr.indexOf(char);
+
+            $(`.output>div>div:nth-child(${index+1})`).html(char);
+
+            charArr[index]='0';
+        }
+        else{
+            $('span').html('  Wrong! :(');
+            $('span').css('color', 'red');
+        }
+    }
+    else{
+        $('span').html('');
+    }
 });
